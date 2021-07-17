@@ -1,16 +1,19 @@
 /*
    Method takes an integer input n and prints n digits 
-   in fibonacci sequence. 
+   in fibonacci sequence without recursion. 
 
    Steven Stabile
 */
 
 const fibonacci_generator = n => {
     
-    for(let i=0; i<n; i++) {
-        
-        
+    let fibonacci = [0, 1];
+
+    for(let i=2; i<n; i++) {
+        fibonacci[i] = fibonacci[i-1] + fibonacci[i-2];
     }
+
+    console.log(fibonacci);
     
 }
 
